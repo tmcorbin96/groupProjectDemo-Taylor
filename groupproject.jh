@@ -1,0 +1,15 @@
+entity Document {
+    documentContent Blob
+    collaboratorList String
+    viewerList String
+    documentTitle String
+    createdDate Instant
+    modifiedDate Instant
+    locationOfTheDocument String
+}
+relationship ManyToOne{
+Document{owner} to User
+}
+
+dto * with mapstruct
+service * with serviceClass
